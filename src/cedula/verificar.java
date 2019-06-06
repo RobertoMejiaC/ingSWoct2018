@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class verificar {
     
     
-    public String comprobar(String numero){
+    public String comprobar(String numero,String nombre){
     
     String cedula ;
     
@@ -66,7 +66,7 @@ public class verificar {
         
         int compara=Integer.parseInt(array[9]);
         if((compara==verificador)){
-            System.out.println("Hola el numero de cedula "+cedula+" es correcto");
+            System.out.println("Hola "+nombre+ " el numero de cedula "+cedula+" es correcto");
             System.out.println("El digito verificador es: "+verificador);
             try
             {
@@ -78,7 +78,7 @@ public class verificar {
 
                 //Escribimos en el archivo con el metodo write 
                 escribir.append("\r\n");
-                escribir.write("Hola el numero de cedula "+cedula+" es correcto");
+                escribir.write("Hola "+nombre+" el numero de cedula "+cedula+" es correcto");
                 
 
                 //Cerramos la conexion
@@ -89,7 +89,7 @@ public class verificar {
             System.out.println("Error al escribir");
             }
         } else {
-            System.out.println("Hola el numero de cedula "+cedula+" es incorrecto");
+            System.out.println("Hola "+nombre+" el numero de cedula "+cedula+" es incorrecto");
              try
             {
                 //Se crea el archivo
@@ -100,7 +100,7 @@ public class verificar {
 
                 //Escribimos en el archivo con el metodo write 
                 escribir.append("\r\n");
-                escribir.write("Hola el numero de cedula "+cedula+" es incorrecto");
+                escribir.write("Hola "+nombre+" el numero de cedula "+cedula+" es incorrecto");
 
                 //Cerramos la conexion
                 escribir.close();
